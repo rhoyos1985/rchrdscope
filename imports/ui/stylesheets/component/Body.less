@@ -1,0 +1,48 @@
+body{
+	.body;
+}
+
+.container {
+	.position(absolute, 0, 0, 0, 0);
+	overflow: hidden;
+}
+
+.content-container {
+	color: @font-color-app;
+	.position(absolute, 0, 0, 0, 0);
+	transition: all 200ms ease-out;
+	transform: translate3d(0, 0, 0);
+	background: @primary-color-1;
+	opacity: 1;
+	
+	.header{
+		background: @body-background-header;
+		height: 5em;
+		padding-left: 0;
+		text-align: center;
+	}
+
+	nav{
+		.position(absolute, 0, 0, auto, 0);
+  		transform: translate3d(0,0,0);
+  		transition: all 200ms ease-out;
+  		z-index: 10;
+
+		.item-submenu{
+			font-size: 20px;
+  			margin-top: 18px;
+			margin-bottom: 10px;
+			padding-left: 0;
+		}
+
+		h1{
+			text-align: center;
+			font-size: @font-size-h1 - 0.375;
+		}
+	}
+
+	.content-post{
+		top: 5em !important;
+		position: absolute;
+	}
+}
