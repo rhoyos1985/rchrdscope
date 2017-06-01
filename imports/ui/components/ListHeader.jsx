@@ -9,7 +9,7 @@ class ListHeader extends BaseComponent {
 	};
 	render() {
 		return (
-			<nav className="col-xs-12 col-md-12 header">
+			<nav className="header">
 				<div className="col-xs-2 col-md-2 item-submenu">
 					<a href="#" className="icon-list-unordered"></a>
 				</div>

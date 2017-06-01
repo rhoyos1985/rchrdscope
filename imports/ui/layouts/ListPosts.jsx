@@ -1,21 +1,19 @@
 import React, { Component } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
+import { Posts } from '../../api/posts/posts.js';
 import BaseComponent from '../components/BaseComponent.jsx';
-import Post from '../components/Post.jsx'
+import Post from '../components/Post.jsx';
 
 
 // Post component - represents Layout Post
 class ListPosts extends BaseComponent {
-    getPosts() {
-        return [
-            { _id: 1, img: '/img/cod.png', title: 'Titulo 1', user: 'Usuario 1', pubDate: '12:00:00 am', comments: '3', resumenPost: 'loreimpsum' },
-            { _id: 2, img: '/img/cod.png', title: 'Titulo 2', user: 'Usuario 2', pubDate: '12:00:00 am', comments: '3', resumenPost: 'loreimpsum' },
-            { _id: 3, img: '/img/cod.png', title: 'Titulo 3', user: 'Usuario 3', pubDate: '12:00:00 am', comments: '3', resumenPost: 'loreimpsum' },
-            { _id: 4, img: '/img/cod.png', title: 'Titulo 3', user: 'Usuario 3', pubDate: '12:00:00 am', comments: '3', resumenPost: 'loreimpsum' },
-        ];
+    constructor(props) {
+       super(props);
     }
 
     renderPosts() {
-        return this.getPosts().map((post) => (
+        let filteredPosts = this.props.posts;
+        return filteredPosts.map((post) => (
             <Post key={post._id} post={post} />
         ));
     }
@@ -31,4 +29,8 @@ class ListPosts extends BaseComponent {
     }
 }
 
-export default ListPosts;
+export default createContainer(() => {
+  return {
+    posts: Posts.find().fetch(),
+  };
+}, ListPosts);

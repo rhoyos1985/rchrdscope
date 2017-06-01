@@ -3,14 +3,12 @@ body{
 }
 
 .container {
-	.position(absolute, 0, 0, 0, 0);
 	padding-right: 0;
 	padding-left: 0;
 }
 
 .content-container {
 	color: @font-color-app;
-	.position(relative, 0, 0, 0, 0);
 	transition: all 200ms ease-out;
 	transform: translate3d(0, 0, 0);
 	background: @primary-color-1;
@@ -24,7 +22,6 @@ body{
 	}
 
 	nav{
-		.position(absolute, 0, 0, auto, 0);
   		transform: translate3d(0,0,0);
   		transition: all 200ms ease-out;
   		z-index: 10;
@@ -43,8 +40,8 @@ body{
 	}
 
 	.content-post{
-		.position(relative, 6em, 0, auto, 0);
 		height: 100%;
+		margin-top: 10px;
 		text-align: left;
 	}
 }
@@ -87,5 +84,6 @@ body{
 
 	.thumbnail_img{
 		height: 200px;
+		padding: 10px 10px 0px 10px;
 	}
 }
