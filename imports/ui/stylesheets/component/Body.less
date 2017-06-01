@@ -4,12 +4,13 @@ body{
 
 .container {
 	.position(absolute, 0, 0, 0, 0);
-	overflow: hidden;
+	padding-right: 0;
+	padding-left: 0;
 }
 
 .content-container {
 	color: @font-color-app;
-	.position(absolute, 0, 0, 0, 0);
+	.position(relative, 0, 0, 0, 0);
 	transition: all 200ms ease-out;
 	transform: translate3d(0, 0, 0);
 	background: @primary-color-1;
@@ -42,8 +43,49 @@ body{
 	}
 
 	.content-post{
-		top: 5em !important;
-		position: absolute;
+		.position(relative, 6em, 0, auto, 0);
+		height: 100%;
 		text-align: left;
+	}
+}
+
+.content_post_list{
+	margin-left: 6px;
+	margin-top: 0px;
+	width: 95%;
+}
+
+.thumbnail_post{
+	.caption_info{
+		background: @primary-color-withe;
+		.border(1px solid @primary-color-gray-30, 0, 1px solid @primary-color-gray-30, 0);
+		color: @primary-color-gray-90;
+		.xfont(0.75em; bold);
+		margin-top:10px;
+		padding: 7px 7px 7px 1.2px;
+		overflow: hidden;
+
+		.caption_info_item{
+			display: inline-block;
+			list-style: none;
+			margin-right: 10px;
+			margin-left: 10px;
+
+			.caption_info_item_icon{
+				.xfont(0.8em; normal);
+				padding-right: 3px;
+			}
+
+			a{
+				color: @primary-color-gray-90;
+				&:hover{
+					color: @primary-color-gray-90;
+				}
+			}
+		}
+	}
+
+	.thumbnail_img{
+		height: 200px;
 	}
 }
