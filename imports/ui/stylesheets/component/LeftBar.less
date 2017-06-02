@@ -1,0 +1,50 @@
+.avatar{
+	margin: 60px;
+
+	.caption{
+		text-align: center;
+
+		h1{
+			span:first-child{
+				color: rgba(255,255,255,0.8);
+				padding-right: 5px;
+			}
+
+			span:last-child{
+				color: @primary-color-blue-30;
+			}
+		}
+	}
+
+	.avatar_img{
+		border: 3px solid white;
+		height: 150px;
+		width: 150px;
+	}	
+}
+
+.menu {
+  .position(absolute, 0, 0, 0, 0, @menu-width);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.subjects{
+
+	.subjectsList{
+		margin-left: 25px;
+
+		.subjectsList_item{
+
+
+			.subjectsList_itemLink{
+				box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 0;
+				color: @primary-color-white-opacity-40;
+				display: block;
+				line-height: 1.5em;
+				padding: .75em 2.5em;
+				position: relative;
+			}
+		}
+	}
+}

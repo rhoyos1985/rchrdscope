@@ -5,7 +5,7 @@ import BaseComponent from './BaseComponent.jsx';
 class Post extends BaseComponent {
 	render() {
 		return (
-			<div className="col-sm-6 col-md-4">
+			<div className="col-sm-6 col-md-6">
 				<div className="thumbnail thumbnail_post">
 					<img className="thumbnail_img" src={this.props.post.img} alt="Imagen" />
 					<div className="caption">

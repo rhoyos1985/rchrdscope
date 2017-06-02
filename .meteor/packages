@@ -23,3 +23,4 @@ twbs:bootstrap
 underscore
 less
 react-meteor-data
+session
