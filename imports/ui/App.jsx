@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BaseComponent from './components/BaseComponent.jsx';
 import ListHeader from './components/ListHeader.jsx';
 import ListPosts from './layouts/ListPosts.jsx'; 
 
 // App component - represents the whole app
-export default class App extends BaseComponent {
+class App extends BaseComponent {
     constructor(props) {
-       super(props);
+        super(props);
+        this.state = {
+            menuOpen: false,
+        };
     }
 
     render() {
+        const { menuOpen } = this.props;
+
         return (
-            <div className="container">
+            <div className={menuOpen ? 'container menu-open' : 'container'}>
                 <section className="menu">
                     <div className="avatar">
                         <img src="/img/cod.png" alt="avatar" className="img-circle avatar_img" />
@@ -38,11 +45,24 @@ export default class App extends BaseComponent {
                         </ul>
                     </div>
                 </section>
+                
                 <div className="content-container">
-                    <ListHeader />
-                    <ListPosts />
+                    <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={200} transitionLeaveTimeout={200}>
+                        <ListHeader />
+                        <ListPosts />
+                    </ReactCSSTransitionGroup>
                 </div>
             </div>
         );
     }
 }
+
+App.propTypes = {
+  menuOpen: React.PropTypes.bool,    // is side menu open?
+};
+
+export default createContainer(() => {
+    return {
+        menuOpen: Session.get('menuOpen')
+    };
+}, App);
