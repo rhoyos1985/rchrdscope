@@ -1,0 +1,20 @@
+@media screen and (min-width: 40em) {
+	.content-container{
+		left: @menu-width;
+	 	max-width: 75%;
+
+	 	.menu-open &{
+			transform: translate3d(0, 0, 0); //reset transform and use position properties instead
+			opacity: 1;
+			left: @menu-width;
+	 	}
+
+	 	nav{
+			.item-submenu{
+				.nav-item{
+					display: none;
+				}
+			}
+	 	}
+	}
+}
