@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { createContainer } from 'meteor/react-meteor-data';
 import { Posts } from '../../api/posts/posts.js';
 import BaseComponent from '../components/BaseComponent.jsx';
@@ -12,7 +12,7 @@ class ListPosts extends BaseComponent {
     }
 
     renderPosts() {
-        let filteredPosts = this.props.posts;
+        let filteredPosts = this.props.listPosts;
         return filteredPosts.map((post) => (
             <Post key={post._id} post={post} />
         ));
@@ -29,8 +29,15 @@ class ListPosts extends BaseComponent {
     }
 }
 
+ListPosts.propTypes= {
+    loading: React.PropTypes.bool,
+    listPosts: React.PropTypes.array,
+};
+
 export default createContainer(() => {
-  return {
-    posts: Posts.find().fetch(),
-  };
+    const listPostsHandle = Meteor.subscribe('list.posts');
+    return {
+        loading: listPostsHandle.ready(),
+        listPosts: Posts.find().fetch(),
+    };
 }, ListPosts);

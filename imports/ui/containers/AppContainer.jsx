@@ -2,11 +2,14 @@ import { Meteor } from 'meteor/meteor';
 import { Session } from 'meteor/session';
 import { createContainer } from 'meteor/react-meteor-data';
 
-
+import { Categories } from '../../api/postscategories/categories.js';
 import App from '../layouts/App.jsx';
 
 export default createContainer(() => {
+	const publicHandle = Meteor.subscribe('list.categories');
+  
     return {
-        menuOpen: Session.get('menuOpen')
+    	listCategories: Categories.find().fetch(),
+        menuOpen: Session.get('menuOpen'),
     };
 }, App);
