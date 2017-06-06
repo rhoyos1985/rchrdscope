@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
+import { createContainer } from 'meteor/react-meteor-data';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import BaseComponent from '../components/BaseComponent.jsx';
 import ListHeader from '../components/ListHeader.jsx';
 import ListPosts from './ListPosts.jsx'; 
 import AuthRegisterPage from '../pages/AuthRegisterPage.jsx';
+import CategoriesPage from '../pages/CategoriesPage.jsx';
 
 // App component - represents the whole app
-export default class App extends BaseComponent {
+class App extends BaseComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -48,8 +50,7 @@ export default class App extends BaseComponent {
                 
                 <div className="content-container">
                     <ReactCSSTransitionGroup transitionName="fade" transitionEnterTimeout={200} transitionLeaveTimeout={200}>
-                     
-                        <AuthRegisterPage />
+                        <CategoriesPage />
                     </ReactCSSTransitionGroup>
                 </div>
             </div>
@@ -60,3 +61,9 @@ export default class App extends BaseComponent {
 App.propTypes = {
   menuOpen: React.PropTypes.bool,    // is side menu open?
 };
+
+export default createContainer(() => {
+    return {
+        menuOpen: Session.get('menuOpen')
+    };
+}, App);

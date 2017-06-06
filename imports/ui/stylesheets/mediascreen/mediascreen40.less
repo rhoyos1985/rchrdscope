@@ -1,12 +1,13 @@
 @media screen and (min-width: 40em) {
 	.content-container{
 		left: @menu-width;
-	 	max-width: 75%;
+	 	max-width: 60%;
 
 	 	.menu-open &{
 			transform: translate3d(0, 0, 0); //reset transform and use position properties instead
 			opacity: 1;
 			left: @menu-width;
+
 	 	}
 
 	 	nav{
@@ -16,5 +17,13 @@
 				}
 			}
 	 	}
+
+	 	.authregister{
+	 		width: 75%;
+	 	}
+	}
+
+	.menu{
+		max-width: 26%;
 	}
 }

@@ -1,5 +1,5 @@
 .container {
-	.position(absolute, 0, 0, 0, 0);
+	.position(relative, 0, 0, 0, 0);
 	padding-right: 0;
 	padding-left: 0;
 
@@ -59,6 +59,10 @@
 		transform: translate3d(@menu-width, 0, 0);
 		opacity: .85;
 		left: 0;
+
+		.menu{
+			display: block;
+		}
 	}
 }
 
