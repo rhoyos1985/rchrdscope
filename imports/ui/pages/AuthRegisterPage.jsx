@@ -1,5 +1,6 @@
 import React from 'react';
 import BaseComponent from '../components/BaseComponent.jsx';
+import AuthPage from './AuthPage.jsx';
 
 export default class AuthRegisterPage extends BaseComponent {
 	constructor(props) {
@@ -7,7 +8,7 @@ export default class AuthRegisterPage extends BaseComponent {
     }
 
 	render(){
-		return(
+		const content = (
 			<div className="authregister">
 				<div className="">
 					<h1>Join</h1>
@@ -27,5 +28,7 @@ export default class AuthRegisterPage extends BaseComponent {
 				</form>
 			</div>
 		);
+
+		return <AuthPage content={content} />;
 	}
 }

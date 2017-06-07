@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 
 import BaseComponent from './BaseComponent.jsx';
 
@@ -15,7 +15,12 @@ class ListCategories extends BaseComponent {
 			    <ul className="subjectsList">
 			        <li className="subjectsList_item">
 						{listsCategories.map(categorie => (
-							<a className="subjectsList_itemLink" href="#" key={categorie._id.toString()}>{categorie.categorieName}</a> 
+							<NavLink 	to="/" key={categorie._id} 
+										title={categorie.categorieName}
+										className="subjectsList_itemLink" activeClassName="active">
+									{categorie.categorieName}
+							</NavLink>
+							
 						))}
 			        	
 			        </li>
