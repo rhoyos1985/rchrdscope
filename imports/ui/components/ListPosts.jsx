@@ -1,12 +1,11 @@
 import React from 'react';
-import { createContainer } from 'meteor/react-meteor-data';
-import { Posts } from '../../api/posts/posts.js';
+
 import BaseComponent from '../components/BaseComponent.jsx';
-import Post from '../components/Post.jsx';
+import Post from './Post.jsx';
 
 
 // Post component - represents Layout Post
-class ListPosts extends BaseComponent {
+export default class ListPosts extends BaseComponent {
     constructor(props) {
        super(props);
     }
@@ -20,10 +19,8 @@ class ListPosts extends BaseComponent {
 
     render() {
         return (
-            <div className="content-post">
-                <div className="row content_post_list">
+            <div className="row content-post ">
                     {this.renderPosts()}
-                </div>
             </div>
         );
     }
@@ -33,11 +30,3 @@ ListPosts.propTypes= {
     loading: React.PropTypes.bool,
     listPosts: React.PropTypes.array,
 };
-
-export default createContainer(() => {
-    const listPostsHandle = Meteor.subscribe('list.posts');
-    return {
-        loading: listPostsHandle.ready(),
-        listPosts: Posts.find().fetch(),
-    };
-}, ListPosts);

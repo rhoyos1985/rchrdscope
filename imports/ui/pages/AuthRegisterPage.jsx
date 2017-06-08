@@ -1,6 +1,6 @@
 import React from 'react';
 import BaseComponent from '../components/BaseComponent.jsx';
-import AuthPage from './AuthPage.jsx';
+import AppContainer from '../containers/AppContainer.jsx';
 
 export default class AuthRegisterPage extends BaseComponent {
 	constructor(props) {
@@ -9,7 +9,7 @@ export default class AuthRegisterPage extends BaseComponent {
 
 	render(){
 		const content = (
-			<div className="authregister">
+			<div>
 				<div className="">
 					<h1>Join</h1>
 					<h3>Joining allows you to make private lists</h3>
@@ -29,6 +29,6 @@ export default class AuthRegisterPage extends BaseComponent {
 			</div>
 		);
 
-		return <AuthPage content={content} />;
+		return <AppContainer content={content} />;
 	}
 }
