@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 import BaseComponent from '../components/BaseComponent.jsx';
@@ -27,6 +28,6 @@ export default class ListPosts extends BaseComponent {
 }
 
 ListPosts.propTypes= {
-    loading: React.PropTypes.bool,
-    listPosts: React.PropTypes.array,
+    loading: PropTypes.bool,
+    listPosts: PropTypes.array,
 };

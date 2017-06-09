@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 
 // a common layout wrapper for auth pages
@@ -13,7 +14,7 @@ const AuthPage = ({ content }) => (
 );
 
 AuthPage.propTypes = {
-  content: React.PropTypes.element,
+  content: PropTypes.element,
 };
 
 export default AuthPage;

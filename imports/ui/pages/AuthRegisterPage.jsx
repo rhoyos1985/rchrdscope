@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { Accounts } from 'meteor/accounts-base';
 
@@ -14,10 +15,12 @@ export default class AuthRegisterPage extends BaseComponent {
     onSubmit(event){
     	event.preventDefault();
 
-    	const email = this.email.vaule;
+    	const email = this.email.value;
     	const password = this.password.value;
     	const confirmPass = this.confirmPass.value;
     	const errors = {};
+
+    	alert('context: ' + this.context.router);
 
     	if(!email){
     		errors.email = "Error email";
@@ -34,12 +37,11 @@ export default class AuthRegisterPage extends BaseComponent {
     		return;
     	}
 
-    	return;
     	Accounts.createUser({ email, password, }, (err) =>{
     		if(err) {
     			this.setState({ errors: { none: err.reazon }, });
     		}
-    		this.context.router.push('/');
+    		this.context.router.history.push('/');
     	});
     }
 
@@ -85,5 +87,5 @@ export default class AuthRegisterPage extends BaseComponent {
 }
 
 AuthRegisterPage.contextTypes = {
-	router: React.PropTypes.object,
+	router: PropTypes.object,
 };

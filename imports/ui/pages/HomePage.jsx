@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import BaseComponent from '../components/BaseComponent.jsx';
@@ -13,6 +13,6 @@ export default class AppPrueba extends BaseComponent {
 
     render() {
     	const content = <ListPostsContainer />;
-        return <AppContainer content={content} />
+        return <AppContainer key='home' content={content} />
     }
 }

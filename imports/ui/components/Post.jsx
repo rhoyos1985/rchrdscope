@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import BaseComponent from './BaseComponent.jsx';
 
 // Task component - represents a single todo item

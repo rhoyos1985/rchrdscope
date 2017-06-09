@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { Categories } from '../../api/postscategories/categories.js';
 import BaseComponent from '../components/BaseComponent.jsx';

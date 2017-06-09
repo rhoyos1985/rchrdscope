@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import BaseComponent from '../components/BaseComponent.jsx';
@@ -43,7 +44,7 @@ export default class AppLayout extends BaseComponent {
 }
 
 AppLayout.propTypes = {
-    listCategories: React.PropTypes.array,  // list categories
-    menuOpen: React.PropTypes.bool,         // is side menu open?
-    content: React.PropTypes.element,       // Elements
+    listCategories: PropTypes.array,  // list categories
+    menuOpen: PropTypes.bool,         // is side menu open?
+    content: PropTypes.element,       // Elements
 };

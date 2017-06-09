@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
@@ -31,7 +32,7 @@ class ListCategories extends BaseComponent {
 };
 
 ListCategories.propTypes = {
-	listsCategories: React.PropTypes.array,
+	listsCategories: PropTypes.array,
 };
 
 export default ListCategories;
