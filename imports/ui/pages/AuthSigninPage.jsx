@@ -5,7 +5,7 @@ import { Accounts } from 'meteor/accounts-base';
 import BaseComponent from '../components/BaseComponent.jsx';
 import AppContainer from '../containers/AppContainer.jsx';
 
-export default class AuthRegisterPage extends BaseComponent {
+export default class AuthSigninPage extends BaseComponent {
 	constructor(props) {
        super(props);
        this.state = Object.assign(this.state, { errors: {} });
@@ -19,8 +19,6 @@ export default class AuthRegisterPage extends BaseComponent {
     	const password = this.password.value;
     	const confirmPass = this.confirmPass.value;
     	const errors = {};
-
-    	alert('context: ' + this.context.router);
 
     	if(!email){
     		errors.email = "Error email";
@@ -86,6 +84,6 @@ export default class AuthRegisterPage extends BaseComponent {
 	}
 }
 
-AuthRegisterPage.contextTypes = {
+AuthSigninPage.contextTypes = {
 	router: PropTypes.object,
 };
