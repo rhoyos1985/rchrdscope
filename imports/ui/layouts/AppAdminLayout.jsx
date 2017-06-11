@@ -5,11 +5,11 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import BaseComponent from '../components/BaseComponent.jsx';
 import ListHeader from '../components/ListHeader.jsx';
-import UserAvatar from '../components/UserAvatar.jsx';
+import UserMenu from '../components/UserMenu.jsx';
 import ListMenu from '../components/ListMenu.jsx';
 
 // App component - represents the whole app
-export default class AppLayout extends BaseComponent {
+export default class AppAdminLayout extends BaseComponent {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,8 +24,9 @@ export default class AppLayout extends BaseComponent {
 
     render() {
         const { 
+            user,
             connected,
-            listMenu,
+            menu,
             menuOpen, 
             content,
         } = this.props;
@@ -33,8 +34,8 @@ export default class AppLayout extends BaseComponent {
         return (
             <div className={menuOpen ? 'container menu-open' : 'container'}>
                 <section className="menu">
-                    <UserAvatar />
-                    <ListMenu listMenu={listMenu} />
+                    <UserMenu user={user} logout={this.logout}/>
+                    <ListMenu listMenu={menu} />
                 </section>
                 
                 <div className="content-container">
@@ -50,9 +51,10 @@ export default class AppLayout extends BaseComponent {
     }
 }
 
-AppLayout.propTypes = {
-    connected: PropTypes.bool,        // server connection status
-    listMenu: PropTypes.array,  // list categories
-    menuOpen: PropTypes.bool,         // is side menu open?
-    content: PropTypes.element,       // Elements
+AppAdminLayout.propTypes = {
+    user: PropTypes.object,     // User
+    connected: PropTypes.bool,  // server connection status
+    menu: PropTypes.array,      // list categories
+    menuOpen: PropTypes.bool,   // is side menu open?
+    content: PropTypes.element, // Elements
 };

@@ -3,7 +3,7 @@ import React from 'react';
 import { Accounts } from 'meteor/accounts-base';
 
 import BaseComponent from '../components/BaseComponent.jsx';
-import AppContainer from '../containers/AppContainer.jsx';
+import AppAdminContainer from '../containers/AppAdminContainer.jsx';
 
 export default class AuthSigninPage extends BaseComponent {
 	constructor(props) {
@@ -80,7 +80,7 @@ export default class AuthSigninPage extends BaseComponent {
 			</div>
 		);
 
-		return <AppContainer content={content} />;
+		return <AppAdminContainer content={content} />;
 	}
 }
 

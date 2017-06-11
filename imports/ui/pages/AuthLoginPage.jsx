@@ -3,7 +3,7 @@ import React from 'react';
 import { Accounts } from 'meteor/accounts-base';
 
 import BaseComponent from '../components/BaseComponent.jsx';
-import AppContainer from '../containers/AppContainer.jsx';
+import AppAdminContainer from '../containers/AppAdminContainer.jsx';
 
 export default class AuthLoginPage extends BaseComponent {
 	constructor(props) {
@@ -37,7 +37,7 @@ export default class AuthLoginPage extends BaseComponent {
 					errors: { none: err.reason },
 				});
 			} else {
-				this.context.router.history.push('/');
+				this.context.router.history.push('/admin');
 			}
 		});
     	
@@ -76,7 +76,7 @@ export default class AuthLoginPage extends BaseComponent {
 			</div>
 		);
 
-		return <AppContainer content={content} />;
+		return <AppAdminContainer content={content} />;
 	}
 }
 

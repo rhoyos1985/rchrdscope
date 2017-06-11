@@ -9,7 +9,8 @@ export default AppContainer = createContainer(({ content }) => {
 	const publicHandle = Meteor.subscribe('list.categories');
   
     return {
-    	listCategories: Categories.find().fetch(),
+    	connected: Meteor.status().connected,
+    	listMenu: Categories.find().fetch(),
         menuOpen: Session.get('menuOpen'),
         content,
     };
