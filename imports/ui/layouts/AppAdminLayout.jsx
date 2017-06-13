@@ -18,8 +18,15 @@ export default class AppAdminLayout extends BaseComponent {
         this.logout = this.logout.bind(this);
     }
 
+    componentWillReceiveProps({ user }) {
+        if (!user) {
+            this.context.router.history.replace('/login');
+        }
+    }
+
     logout() {
         Meteor.logout();
+        this.context.router.history.push('/login');
     }
 
     render() {
@@ -57,4 +64,8 @@ AppAdminLayout.propTypes = {
     menu: PropTypes.array,      // list categories
     menuOpen: PropTypes.bool,   // is side menu open?
     content: PropTypes.element, // Elements
+};
+
+AppAdminLayout.contextTypes = {
+    router: PropTypes.object,
 };

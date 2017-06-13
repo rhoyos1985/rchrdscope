@@ -23,4 +23,6 @@ react-meteor-data
 session
 static-html
 accounts-password
-aldeed:collection2-core
+aldeed:collection2-core@2.0.0
+aldeed:schema-deny
+mdg:validated-method

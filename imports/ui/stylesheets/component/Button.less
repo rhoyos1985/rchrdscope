@@ -27,7 +27,7 @@
   &[class*="secondary"] {
     transition: all 300ms ease-in;
     box-shadow: lighten(#517096, 5%) 0 0 0 1px inset;
-    color: @primary-color-white;
+    color: @primary-color-white; 
 
     &:hover{ color: @color-rare; }
     &:active,
@@ -50,4 +50,11 @@
 
     & + [class*="btn-"] { margin-left: -1px; }
   }
+}
+
+.btn-default-pr{
+  background: @primary-color-white;
+  box-shadow: lighten(#517096, 5%) 0 0 0 1px inset;
+  color: @color-primary;
+  transition: all 300ms ease-in;
 }

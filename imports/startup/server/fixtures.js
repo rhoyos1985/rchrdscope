@@ -1,6 +1,6 @@
 import { Meteor } from 'meteor/meteor';
 import { Posts } from '../../api/posts/posts.js';
-import '../../api/postscategories/categories.js';
+//import '../../api/postscategories/categories.js';
 
 Meteor.startup(() => {
   // code to run on server at startup
