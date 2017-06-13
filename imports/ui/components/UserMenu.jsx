@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { NavLink } from 'react-router-dom';
@@ -9,6 +10,9 @@ class UserMenu extends BaseComponent {
 		super(props);
 		this.state = Object.assign(this.state, { open: false });
 		this.toggle = this.toggle.bind(this);
+		this.logout = this.logout.bind(this);
+
+		
 	}
 
 	toggle(e) {
@@ -16,6 +20,11 @@ class UserMenu extends BaseComponent {
 		this.setState({
 			open: !this.state.open,
 		});
+	}
+
+	logout() {
+	    Meteor.logout();
+	    this.context.router.history.push('/login');
 	}
 
 	renderLogout(){
@@ -43,7 +52,7 @@ class UserMenu extends BaseComponent {
 					{open ? <span className="icon-arrow-up" /> : <span className="icon-arrow-down" />}
 					{emailLocalPart}
 				</a>
-				{open ? <a className="btn-secondary" onClick={logout}>Logout</a> : null}
+				{open ? <a className="btn-secondary" onClick={this.logout}>Logout</a> : null}
 			</div>
 		);
 	}
@@ -55,7 +64,10 @@ class UserMenu extends BaseComponent {
 
 UserMenu.propTypes = {
 	user: PropTypes.object,		// User
-	logout: PropTypes.func,
+};
+
+UserMenu.contextTypes = {
+    router: PropTypes.object,
 };
 
 export default UserMenu;
