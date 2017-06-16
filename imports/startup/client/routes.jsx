@@ -9,6 +9,7 @@ import CategoriesPage from '../../ui/pages/CategoriesPage.jsx';
 import HomePage from '../../ui/pages/HomePage.jsx';
 import HomeAdminPage from '../../ui/pages/HomeAdminPage.jsx';
 import NotFoundPage from '../../ui/pages/NotFoundPage.jsx';
+import BlogPage from '../../ui/pages/BlogPage.jsx';
 
 const browserHistory = createBrowserHistory();
 
@@ -20,6 +21,7 @@ export const renderRoutes = () => (
 			<Route path="/signin" component={AuthSigninPage} />
 			<Route path="/login" component={AuthLoginPage} />
 			<Route path="/categories" component={CategoriesPage} />
+			<Route path="/post" component={BlogPage} />
 			<Route component={NotFoundPage}/>
 		</Switch>
 	</Router>

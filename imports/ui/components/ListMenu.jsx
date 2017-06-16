@@ -11,15 +11,16 @@ class ListMenu extends BaseComponent {
 
 	render() {
 		const { listMenu } = this.props;
+
 		return(
 			<div className="subjects">
 			    <ul className="subjectsList">
 			        <li className="subjectsList_item">
 						{listMenu.map(list => (
-							<NavLink 	to="/" key={list._id} 
-										title={list.description}
+							<NavLink 	to="/" key={list.title} 
+										title={list.title}
 										className="subjectsList_itemLink" activeClassName="active">
-									{list.description}
+									{list.title}
 							</NavLink>
 							
 						))}

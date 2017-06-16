@@ -8,10 +8,11 @@ import AppContainer from '../containers/AppContainer.jsx';
 export default class HomePage extends BaseComponent {
     constructor(props) {
         super(props);
+        this.state = Object.assign(this.state, { languages: [] });
     }
 
     render() {
     	const content = <ListPostsContainer />;
-        return <AppContainer key='home' content={content} />
+        return <AppContainer key='home' content={content} list={this.state.response} />
     }
 }
