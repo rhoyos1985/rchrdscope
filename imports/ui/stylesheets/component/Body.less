@@ -1,20 +1,28 @@
-body{
-	.body;
-}
-
 .container {
-	.position(absolute, 0, 0, 0, 0);
-	overflow: hidden;
+	.position(relative, 0, 0, 0, 0);
+	padding-right: 0;
+	padding-left: 0;
+
+	@media screen and (min-width: 60em) {
+	  left: @column;
+	  right: @column;
+	}
+
+	@media screen and (min-width: 80em) {
+	  left: 2*@column;
+	  right: 2*@column;
+	}
 }
 
 .content-container {
+	.position(relative, 0, 0, 0, 0);
+	background: @primary-color-1;
 	color: @font-color-app;
-	.position(absolute, 0, 0, 0, 0);
+	max-width: 100%;
+	opacity: 1;
 	transition: all 200ms ease-out;
 	transform: translate3d(0, 0, 0);
-	background: @primary-color-1;
-	opacity: 1;
-	
+
 	.header{
 		background: @body-background-header;
 		height: 5em;
@@ -23,7 +31,6 @@ body{
 	}
 
 	nav{
-		.position(absolute, 0, 0, auto, 0);
   		transform: translate3d(0,0,0);
   		transition: all 200ms ease-out;
   		z-index: 10;
@@ -42,7 +49,56 @@ body{
 	}
 
 	.content-post{
-		top: 5em !important;
-		position: absolute;
+		margin-left: 2.5%;
+		margin-top: 10px;
+		text-align: left;
+		width: 95%;
+	}
+
+	// Toggle menu on mobile
+	.menu-open & {
+		transform: translate3d(@menu-width, 0, 0);
+		opacity: .85;
+		left: 0;
+
+		.menu{
+			display: block;
+		}
+	}
+}
+
+.thumbnail_post{
+	.caption_info{
+		background: @primary-color-white;
+		.border(1px solid @primary-color-gray-30, 0, 1px solid @primary-color-gray-30, 0);
+		color: @primary-color-gray-90;
+		.xfont(0.75em; bold);
+		margin-top:10px;
+		padding: 7px 7px 7px 1.2px;
+		overflow: hidden;
+
+		.caption_info_item{
+			display: inline-block;
+			list-style: none;
+			margin-right: 9px;
+			margin-left: 9px;
+
+			.caption_info_item_icon{
+				.xfont(0.8em; normal);
+				padding-right: 3px;
+			}
+
+			a{
+				color: @primary-color-gray-90;
+				&:hover{
+					color: @primary-color-gray-90;
+				}
+			}
+		}
+	}
+
+	.thumbnail_img{
+		height: 200px;
+		padding: 10px 10px 0px 10px;
 	}
 }
