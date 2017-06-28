@@ -7,6 +7,11 @@ import BaseComponent from './BaseComponent.jsx';
 class ListMenu extends BaseComponent {
 	constructor(props) {
 		super(props);
+		this.pruebaAlert = this.pruebaAlert.bind(this);
+	}
+
+	pruebaAlert(params){
+		alert(params);
 	}
 
 	render() {
@@ -17,10 +22,10 @@ class ListMenu extends BaseComponent {
 			    <ul className="subjectsList">
 			        <li className="subjectsList_item">
 						{listMenu.map(list => (
-							<NavLink 	to="/" key={list.title} 
-										title={list.title}
+							<NavLink 	to="/" key={list.description} 
+										title={list.description}
 										className="subjectsList_itemLink" activeClassName="active">
-									{list.title}
+									{list.description}
 							</NavLink>
 							
 						))}

@@ -23,7 +23,7 @@ class ListHeader extends BaseComponent {
 					</a>
 				</div>
 				<h1 className="col-xs-7 col-md-7">
-					<span>Post Meteor JS pruebas de git flow</span>
+					<span>Post Meteor JS pruebas </span>
 				</h1>
 			</nav>
 		);
@@ -31,6 +31,3 @@ class ListHeader extends BaseComponent {
 }
 
 export default ListHeader;
-
-/*
-*/

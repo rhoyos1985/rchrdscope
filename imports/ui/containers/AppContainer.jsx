@@ -6,11 +6,11 @@ import { Categories } from '../../api/postscategories/categories.js';
 import AppLayout from '../layouts/AppLayout.jsx';
 
 
-export default AppContainer = createContainer(({ content, list }) => {
+export default AppContainer = createContainer(({ content }) => {
 	const publicHandle = Meteor.subscribe('list.categories');
   	return {
 			connected: Meteor.status().connected,
-			listMenu: list,
+			listMenu: Categories.find().fetch(),
 		    menuOpen: Session.get('menuOpen'),
 		    content,
 		};

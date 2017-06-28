@@ -33,7 +33,7 @@ export default class HomePage extends BaseComponent {
     }
 
     render() {
-    	const content = <ListPostsContainer listPosts={this.state.response.Post} />;
-        return <AppContainer key='home' content={content} list={this.state.response} />
+    	const content = <ListPostsContainer />;
+        return <AppContainer key='home' content={content} />
     }
 }
