@@ -8,19 +8,19 @@ class Post extends BaseComponent {
 		return (
 			<div className="col-sm-6 col-md-6">
 				<div className="thumbnail thumbnail_post">
-					<img className="thumbnail_img" src={this.props.post.img} alt="Imagen" />
+					<img className="thumbnail_img" src={this.props.post.cover_image} alt="Imagen" />
 					<div className="caption">
 						<h1>{this.props.post.title}</h1>
 						<ul className="caption_info">
 							<li className="caption_info_item">
 								<a href="#">
 									<span className="glyphicon glyphicon-user caption_info_item_icon"></span>
-									<span>{this.props.post.user}</span>
+									<span>{this.props.post.author.name}</span>
 								</a>
 							</li>
 							<li className="caption_info_item">
 								<span className="glyphicon glyphicon-calendar caption_info_item_icon"></span>
-								<span>{this.props.post.pubDate}</span>
+								<span>{this.props.post.date}</span>
 							</li>
 							<li className="caption_info_item">
 								<a href="#">
@@ -29,7 +29,7 @@ class Post extends BaseComponent {
 								</a>
 							</li>
 						</ul>
-						<p>{this.props.post.resumenPost}...</p>
+						<p>{this.props.post.description}...</p>
 						<p><a href="#" className="caption_read_more_link">Leer mas</a></p>
 					</div>
 				</div>
