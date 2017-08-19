@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
+import '../../api/filestores/files.js';
+
 // route components
 import AuthLoginPage from '../../ui/pages/AuthLoginPage.jsx';
 import AuthSigninPage from '../../ui/pages/AuthSigninPage.jsx';

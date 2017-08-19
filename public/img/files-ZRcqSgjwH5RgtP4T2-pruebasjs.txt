@@ -1,0 +1,50 @@
+/*const createAppContiner = async function (){
+	let resultPosts=[];
+	await fetch('https://rhoyos1985.github.io/blogposts/posts/posts.json',miInit)
+		.then((response) => {
+			return response.json()
+		})
+		.then((result)=>{
+			resultPosts=result.posts;
+		});
+	return resultPosts;
+}
+
+let x = (async () => {
+  let permlvl = await createAppContiner();
+  return permlvl;
+})();
+
+let miModulo = (function(){
+    //Estas serán variables privadas del módulo
+    const nombreModulo = "Mi módulo";
+    const version = "1.1.1";
+    const fechaInicio = new Date();
+    //Este es un método privado
+    function obtenerFecha() {
+        return `Ahora: ${new Date()}`;
+    }
+    //Devolvemos un objeto con variables públicas
+    return {
+        //Esto es una variable pública
+        miVarPublica: "abc",
+        //Esto es un método público con el que accedemos
+        //a las variables privadas
+        listarVariables: function(){
+            return `<ul><li>Módulo: ${nombreModulo}</li>
+                <li>Versión: ${version}</li>
+                <li>Fecha Inicio: ${fechaInicio}</li>
+                <li>Fecha Actual: ${obtenerFecha()}</li></ul>`;
+        },
+        prob: (async function(){
+                	let permlvl = await createAppContiner();
+          				return permlvl;
+                })()
+    };
+})();
+
+/*const pruebas = (async ()=>{
+	let pruebares = await createAppContiner();
+	alert('pruebares:  ' + pruebares)
+	return pruebares;
+}()*/

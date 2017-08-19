@@ -1,6 +1,7 @@
 {
   "name": "rchrdscope",
-  "private": true,
+  "version": "0.0.1",
+  "private": false,
   "scripts": {
     "start": "meteor run",
     "startdev": "meteor run --port 127.0.0.1:5000"
@@ -19,7 +20,7 @@
     "react-dom": "^15.5.4",
     "react-markdown": "^2.5.0",
     "react-router-dom": "^4.1.1",
-    "simpl-schema": "^0.3.0",
-    "superagent": "^3.5.2"
-  }
+    "simpl-schema": "^0.3.0"
+  },
+  "devDependencies": {}
 }

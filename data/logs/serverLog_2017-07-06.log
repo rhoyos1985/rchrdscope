@@ -1,0 +1,178 @@
+[20170706 - 19:28:20] - [ ERROR ] | User: null | | Prueba mas | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 19:31:26 ] - [ ERROR ] | User: null | | Prueba mas | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 19:39:53 ] - [ ERROR ] | User: null | | Prueba mas | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 19:51:38 ] - [ ERROR ] | User: null | | Prueba mas | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 19:58:18 ] - [ ERROR ] | User: null | | Prueba mas | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:06:48 ] - [ ERROR ] | User: null | | Prueba mas | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:13:14 ] - [ INFO ] | User: null | | message info | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:13:14 ] - [ DEBUG ] | User: null | | message debug | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:13:14 ] - [ ERROR ] | User: null | | message error | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:13:14 ] - [ FATAL ] | User: null | | message fatal | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:13:14 ] - [ WARN ] | User: null | | message warn | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:13:14 ] - [ TRACE ] | User: null | | message trace | 
+{
+  "file": "url",
+  "onLine": "line",
+  "stackTrace": [
+    "[object Object]",
+    "    at Logger._log (packages/ostrio:logger/logger.js:57:36)",
+    "    at Logger.trace (packages/ostrio:logger/logger.js:206:17)",
+    "    at imports/startup/server/fixtures.js:46:5",
+    "    at Function.time (E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\profile.js:309:28)",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:347:13",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:388:5",
+    "    at Function.run (E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\profile.js:510:12)",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:386:11"
+  ]
+} 
+[ 20170706 - 20:19:38 ] - [ INFO ] | User: null | | message info | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:19:38 ] - [ DEBUG ] | User: null | | message debug | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:19:38 ] - [ FATAL ] | User: null | | message fatal | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:19:38 ] - [ ERROR ] | User: null | | message error | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:19:38 ] - [ WARN ] | User: null | | message warn | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:19:38 ] - [ TRACE ] | User: null | | message trace | 
+{
+  "file": "url",
+  "onLine": "line",
+  "stackTrace": [
+    "[object Object]",
+    "    at Logger._log (packages/ostrio:logger/logger.js:57:36)",
+    "    at Logger.trace (packages/ostrio:logger/logger.js:206:17)",
+    "    at imports/startup/server/fixtures.js:46:5",
+    "    at Function.time (E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\profile.js:309:28)",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:347:13",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:388:5",
+    "    at Function.run (E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\profile.js:510:12)",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:386:11"
+  ]
+} 
+[ 20170706 - 20:26:56 ] - [ INFO ] | User: null | | message info | 
+{
+  "file": "Cliente",
+  "onLine": "line"
+} 
+[ 20170706 - 20:26:56 ] - [ DEBUG ] | User: null | | message debug | 
+{
+  "file": "Cliente",
+  "onLine": "line"
+} 
+[ 20170706 - 20:26:56 ] - [ ERROR ] | User: null | | message error | 
+{
+  "file": "Cliente",
+  "onLine": "line"
+} 
+[ 20170706 - 20:26:56 ] - [ FATAL ] | User: null | | message fatal | 
+{
+  "file": "Cliente",
+  "onLine": "line"
+} 
+[ 20170706 - 20:26:56 ] - [ WARN ] | User: null | | message warn | 
+{
+  "file": "Cliente",
+  "onLine": "line"
+} 
+[ 20170706 - 20:37:15 ] - [ INFO ] | User: null | | message info | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:37:15 ] - [ DEBUG ] | User: null | | message debug | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:37:15 ] - [ ERROR ] | User: null | | message error | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:37:15 ] - [ FATAL ] | User: null | | message fatal | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:37:15 ] - [ WARN ] | User: null | | message warn | 
+{
+  "file": "url",
+  "onLine": "line"
+} 
+[ 20170706 - 20:37:15 ] - [ TRACE ] | User: null | | message trace | 
+{
+  "file": "url",
+  "onLine": "line",
+  "stackTrace": [
+    "[object Object]",
+    "    at Logger._log (packages/ostrio:logger/logger.js:57:36)",
+    "    at Logger.trace (packages/ostrio:logger/logger.js:206:17)",
+    "    at imports/startup/server/fixtures.js:46:5",
+    "    at Function.time (E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\profile.js:309:28)",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:347:13",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:388:5",
+    "    at Function.run (E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\profile.js:510:12)",
+    "    at E:\\richard\\desarrollo\\rchrdscope\\.meteor\\local\\build\\programs\\server\\boot.js:386:11"
+  ]
+} 

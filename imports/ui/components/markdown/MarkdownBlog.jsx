@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactMarkdown from 'react-markdown';
@@ -6,10 +7,12 @@ import assign from 'lodash.assign';
 import Editor from './Editor.jsx';
 import CodeBlock from './CodeBlock.jsx';
 import MarkdownControls from './MarkdownControls.jsx';
+import Files from '../../../api/filestores/files.js';
 
 class MarkdownBlog extends React.Component {
     constructor(props) {
         super(props);
+        Meteor.subscribe("list.files");
 
         this.state = {
             markdownSrc: '# Live demo\n\nChanges are automatically rendered as you type.\n\n* Follows the [CommonMark](http://commonmark.org/) spec\n* Renders actual, "native" React DOM elements\n* Allows you to escape or skip HTML (try toggling the checkboxes above)',
@@ -19,6 +22,10 @@ class MarkdownBlog extends React.Component {
 
         this.onMarkdownChange = this.onMarkdownChange.bind(this);
         this.onControlsChange = this.onControlsChange.bind(this);
+
+        const file = Files.find({_id:'ecuSRNspyfNduNbwn'});
+        console.log(file);
+        console.log(file.url);
     }
 
     onMarkdownChange(md) {
